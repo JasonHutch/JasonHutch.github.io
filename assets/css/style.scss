@@ -7,7 +7,7 @@
 $theme-sage: #C9C4A3;
 $theme-grey: #898989;
 $theme-off-white: #F2F0EF;
-$theme-forest: #4B6E48;
+$theme-forest: #5C8A58;
 $theme-dark-text: #222222;
 $theme-orange: #FF6D1F;
 
@@ -40,13 +40,13 @@ $theme-orange: #FF6D1F;
     }
     
     ul li.nav-item a.nav-link {
-      color: #000000 !important;
+      color: #666666 !important;
     }
     
     /* Hover State */
     ul li.nav-item a.nav-link:hover {
       background-color: transparent !important;
-      color: #{$theme-orange} !important;
+      color: #000000 !important;
       text-decoration: none;
     }
     
@@ -57,13 +57,16 @@ $theme-orange: #FF6D1F;
     }
     
     .sidebar-bottom i {
-      background-color: #{$theme-forest} !important;
-      color: #ffffff !important;
+      background-color: #ffffff !important;
+      color: #{$theme-orange} !important;
     }
     
     /* Profile image border */
     #avatar img {
       border: 2px solid #{$theme-forest};
+      object-fit: cover;
+      transform: scale(1.2);
+      transform-origin: center center;
     }
   }
 }
@@ -95,7 +98,7 @@ $theme-orange: #FF6D1F;
   /* Sidebar */
   --sidebar-bg: #{$theme-sage};
   --sidebar-muted-color: rgba(255, 255, 255, 0.7);
-  --sidebar-active-color: #000000;
+  --sidebar-active-color: #ffffff;
   --nav-cursor-color: #{$theme-orange};
   --sidebar-btn-bg: #{$theme-forest};
   --sidebar-btn-color: #ffffff;
