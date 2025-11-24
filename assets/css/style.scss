@@ -3,28 +3,171 @@
 
 @import "jekyll-theme-chirpy";
 
-/* Custom Accent Colors extracted from the uploaded image */
-/* Dark Blue Background: #1a1e29 */
-/* Salmon/Pink Accent: #ff6b6b */
+/* New Color Palette */
+$theme-sage: #C9C4A3;
+$theme-grey: #898989;
+$theme-off-white: #F2F0EF;
+$theme-forest: #4B6E48;
+$theme-dark-text: #222222;
+$theme-orange: #FF6D1F;
 
-$accent-color: #ff6b6b;
-$bg-color: #1a1e29;
-$card-bg-color: #232836;
-
-@mixin custom-dark-scheme {
-  --main-bg: #{$bg-color};
-  --sidebar-bg: #{$bg-color};
-  --card-bg: #{$card-bg-color};
-  --card-header-bg: #{$card-bg-color};
+/* Light Mode Styles Mixin */
+@mixin light-mode-overrides {
+  @include custom-light-scheme;
   
-  /* Accents */
-  --link-color: #{$accent-color};
-  --toc-highlight: #{$accent-color};
-  --nav-cursor-color: #{$accent-color};
-  --sidebar-active-color: #{$accent-color};
-  --checkbox-checked-color: #{$accent-color};
-  --btn-backtotop-color: #{$accent-color};
-  --timeline-year-dot-color: #{$accent-color};
+  /* Specific override for sidebar title in light mode */
+  .site-title a {
+    color: #000000 !important;
+  }
+
+  /* Direct overrides to ensure colors are applied */
+  h1, h2, h3, h4, h5, h6 {
+    color: #{$theme-forest} !important;
+  }
+  
+  /* Make bold text orange */
+  strong, b {
+    color: #{$theme-orange};
+  }
+
+  #sidebar {
+    background-color: #{$theme-sage} !important;
+    border-right: none;
+    
+    /* Ensure sidebar text is readable against tan/sage background */
+    .site-subtitle {
+      color: #000000 !important;
+    }
+    
+    ul li.nav-item a.nav-link {
+      color: #000000 !important;
+    }
+    
+    /* Hover State */
+    ul li.nav-item a.nav-link:hover {
+      background-color: transparent !important;
+      color: #{$theme-orange} !important;
+      text-decoration: none;
+    }
+    
+    ul li.nav-item.active a.nav-link {
+      background-color: transparent !important;
+      color: #000000 !important;
+      font-weight: bold;
+    }
+    
+    .sidebar-bottom i {
+      background-color: #{$theme-forest} !important;
+      color: #ffffff !important;
+    }
+    
+    /* Profile image border */
+    #avatar img {
+      border: 2px solid #{$theme-forest};
+    }
+  }
+}
+
+/* Light Mode Overrides */
+@mixin custom-light-scheme {
+  /* Framework color */
+  --main-bg: #{$theme-off-white};
+  --mask-bg: rgba(0, 0, 0, 0.3);
+  --main-border-color: rgba(0, 0, 0, 0.1);
+
+  /* Common color */
+  --text-color: #{$theme-dark-text};
+  --text-muted-color: #666666;
+  --heading-color: #{$theme-forest};
+  --blockquote-border-color: #{$theme-forest};
+  --blockquote-text-color: #{$theme-forest};
+  --link-color: #{$theme-forest};
+  --link-underline-color: #{$theme-forest};
+  --button-bg: #{$theme-forest};
+  --btn-text-color: #ffffff;
+  --btn-border-color: #{$theme-forest};
+  --btn-backtotop-color: #{$theme-forest};
+  --btn-backtotop-border-color: #{$theme-forest};
+  --btn-box-shadow: rgba(0, 0, 0, 0.1);
+  --checkbox-color: #c5c5c5;
+  --checkbox-checked-color: #{$theme-forest};
+  
+  /* Sidebar */
+  --sidebar-bg: #{$theme-sage};
+  --sidebar-muted-color: rgba(255, 255, 255, 0.7);
+  --sidebar-active-color: #000000;
+  --nav-cursor-color: #{$theme-orange};
+  --sidebar-btn-bg: #{$theme-forest};
+  --sidebar-btn-color: #ffffff;
+
+  /* Topbar */
+  --topbar-text-color: #{$theme-dark-text};
+  --topbar-wrapper-bg: #{$theme-off-white};
+  --search-wrapper-bg: rgba(255, 255, 255, 0.6);
+  --search-wrapper-border-color: rgba(0, 0, 0, 0.1);
+  --search-tag-bg: rgba(0, 0, 0, 0.05);
+  --search-icon-color: #{$theme-forest};
+  --input-focus-border-color: #{$theme-forest};
+
+  /* Home page */
+  --post-list-text-color: #555555;
+  --btn-paginator-text-color: #{$theme-forest};
+  --btn-paginator-hover-color: #{$theme-sage};
+  --btn-paginator-border-color: #{$theme-forest};
+  --pin-bg: #ffffff;
+  --pin-color: #{$theme-forest};
+
+  /* Posts */
+  --toc-highlight: #{$theme-forest};
+  --btn-share-hover-color: #{$theme-forest};
+  --card-bg: #ffffff;
+  --card-header-bg: #f9f9f9;
+  --card-hovor-bg: #f0f0f0;
+  --card-border-color: rgba(0, 0, 0, 0.05);
+  --card-box-shadow: rgba(0, 0, 0, 0.05);
+  --label-color: #616161;
+  --relate-post-date: rgba(0, 0, 0, 0.4);
+  --tag-bg: rgba(75, 110, 72, 0.1);
+  --tag-border: rgba(75, 110, 72, 0.2);
+  --tag-shadow: rgba(75, 110, 72, 0.1);
+  --tag-hover: rgba(75, 110, 72, 0.2);
+  --tb-odd-bg: rgba(0, 0, 0, 0.02);
+  --tb-border-color: rgba(0, 0, 0, 0.1);
+  --timeline-year-dot-color: #{$theme-forest};
+}
+
+/* Dark Mode Overrides */
+@mixin custom-dark-scheme {
+  --main-bg: #1a1a1a;
+  --sidebar-bg: #1a1a1a;
+  --card-bg: #222222;
+  --card-header-bg: #2a2a2a;
+  
+  /* Accents - Using Sage for softer contrast in dark mode */
+  --link-color: #{$theme-sage};
+  --toc-highlight: #{$theme-sage};
+  --nav-cursor-color: #{$theme-sage};
+  --sidebar-active-color: #{$theme-sage};
+  --checkbox-checked-color: #{$theme-sage};
+  --btn-backtotop-color: #{$theme-sage};
+  --timeline-year-dot-color: #{$theme-sage};
+  
+  /* Re-apply forest green for specific elements if needed */
+  --btn-bg: #{$theme-forest};
+}
+
+:root {
+  @include custom-light-scheme;
+}
+
+/* Apply to explicit light mode */
+html[data-mode="light"] {
+  @include light-mode-overrides;
+}
+
+/* Apply to implicit light mode (no mode set, not dark) */
+html:not([data-mode="dark"]) {
+   @include light-mode-overrides;
 }
 
 @media (prefers-color-scheme: dark) {
