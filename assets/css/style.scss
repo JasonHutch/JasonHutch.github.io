@@ -1,0 +1,38 @@
+---
+---
+
+@import "jekyll-theme-chirpy";
+
+/* Custom Accent Colors extracted from the uploaded image */
+/* Dark Blue Background: #1a1e29 */
+/* Salmon/Pink Accent: #ff6b6b */
+
+$accent-color: #ff6b6b;
+$bg-color: #1a1e29;
+$card-bg-color: #232836;
+
+@mixin custom-dark-scheme {
+  --main-bg: #{$bg-color};
+  --sidebar-bg: #{$bg-color};
+  --card-bg: #{$card-bg-color};
+  --card-header-bg: #{$card-bg-color};
+  
+  /* Accents */
+  --link-color: #{$accent-color};
+  --toc-highlight: #{$accent-color};
+  --nav-cursor-color: #{$accent-color};
+  --sidebar-active-color: #{$accent-color};
+  --checkbox-checked-color: #{$accent-color};
+  --btn-backtotop-color: #{$accent-color};
+  --timeline-year-dot-color: #{$accent-color};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include custom-dark-scheme;
+  }
+}
+
+html[data-mode="dark"] {
+  @include custom-dark-scheme;
+}
