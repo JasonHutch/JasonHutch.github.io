@@ -1,7 +1,7 @@
 ---
-title: Beyond Attention - The Future of Neural Architectures
+title: Dashabord Personalization API
 date: 2025-11-20 09:15:00 -0600
-categories: [Writing, Tech]
+categories: [Portfolio, Work]
 tags: [blog, Neural Networks, deep learning]
 math: true
 ---

@@ -1,5 +1,5 @@
 ---
-title: Enterprise Cloud Migration
+title: Azure Agentic Intranet Search
 date: 2025-01-15 10:00:00 -0600
 categories: [Portfolio, Work]
 tags: [work project, cloud, aws, architecture]
@@ -7,13 +7,14 @@ tags: [work project, cloud, aws, architecture]
 
 ## Overview
 
-This project involved migrating a legacy monolithic application to a microservices architecture hosted on AWS. The primary goal was to improve scalability, reduce operational costs, and enhance deployment velocity.
+The goal of this project was to build and agentic search experince powered by Azure for the intranet of a non profit healthcare organization.
 
 ## Key Responsibilities
 
-*   **Architecture Design**: Designed a serverless architecture using AWS Lambda, API Gateway, and DynamoDB.
+*   **API Design & Implemetation**:
+*   **Agent Design & Implementation**:
+*   **Data Curation & Ingestion**:
 *   **CI/CD Pipeline**: Implemented a robust CI/CD pipeline using GitHub Actions and AWS CodePipeline to automate testing and deployment.
-*   **Database Migration**: Led the migration of 5TB of data from an on-premise Oracle database to Amazon Aurora PostgreSQL with minimal downtime.
 
 ## Challenges & Solutions
 
@@ -25,9 +26,10 @@ One of the significant challenges was handling the complex dependencies between 
 *   **Performance**: Improved API response times by 60% using CloudFront caching and optimized database queries.
 *   **Reliability**: Achieved 99.99% uptime post-migration.
 
-## Technologies Used
-
-*   AWS (Lambda, API Gateway, DynamoDB, Aurora)
-*   Terraform
-*   Docker
-*   Python / Node.js
+## Technology Used
+- React.js
+- .NET
+- Microsoft Agent Framework
+- Azure Foundry
+- Copilot Studio
+- Azure Cloud Services

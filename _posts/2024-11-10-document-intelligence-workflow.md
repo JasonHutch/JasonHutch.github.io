@@ -1,5 +1,5 @@
 ---
-title: Mini-C Compiler Implementation
+title: Docuemnt Intelligence Workflow
 date: 2024-11-10 14:30:00 -0600
 categories: [Portfolio, Education]
 tags: [school project, c++, compilers, llvm]
@@ -7,14 +7,14 @@ tags: [school project, c++, compilers, llvm]
 
 ## Project Description
 
-For my Advanced Compilers course, I designed and implemented a fully functional compiler for a subset of the C language, dubbed "Mini-C". The compiler translates source code into LLVM Intermediate Representation (IR).
+Build and design an AI enabled workflow capable of ingesting verbose read outs of Key Performance Idicator (KPI), distiling into key take aways and action items, injecting into PowerPoint, and finally socializing to interested parties acorss the organization. 
 
-## Features
+## Key Responsibilities
 
-1.  **Lexical Analysis**: Implemented a scanner using Flex to tokenize the input source code.
-2.  **Parsing**: Built a recursive descent parser to generate an Abstract Syntax Tree (AST) based on the language grammar.
-3.  **Semantic Analysis**: Implemented type checking and scope resolution to ensure code validity.
-4.  **Code Generation**: Utilized the LLVM C++ API to generate optimized IR code.
+*   **API Design & Implemetation**:
+*   **Agent Design & Implementation**:
+*   **Data Curation & Ingestion**:
+*   **CI/CD Pipeline**: Implemented a robust CI/CD pipeline using GitHub Actions and AWS CodePipeline to automate testing and deployment.
 
 ## Code Snippet
 
