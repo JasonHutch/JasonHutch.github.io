@@ -6,17 +6,17 @@ order: 5
 ---
 
 ## Jason Hutchinson
-**Lead Developer | Computer Scientist**
+**Solution Architect**
 *Email: Jasonr.hutchii@gmail.com | [GitHub](https://github.com/JasonHutch) | [LinkedIn](https://www.linkedin.com/in/jason-hutchinson-ii)*
 
 ---
 
 ### Summary
-Experienced software engineer with a strong background in cloud architecture, compiler design, and full-stack development. Passionate about building scalable systems and exploring new technologies.
+Software architect specializing in the design and implemetation of scalable web based backend and agentic systems.
 
 ### Experience
 
-**Senior Software Engineer** | *Tech Corp Inc.* | *Jan 2022 - Present*
+**Lead Developer** | *Rightpoint* | *Jan 2024 - Present*
 *   Led the migration of legacy monoliths to microservices on AWS.
 *   Mentored junior developers and established code quality standards.
 
