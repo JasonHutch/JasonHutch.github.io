@@ -5,7 +5,7 @@ title: About Me
 
 ## Welcome
 
-Hello! I'm **Jason Hutchinson**, a Lead Developer at Rightpoint and graduate student in Software Engineering at UT Arlington. I build secure, scalable backend systems and AI-powered tools on Azure — and I'm always looking for new ways to bring intelligence into the software I design.
+Hello! I'm **Jason Hutchinson**, a Lead Developer at Rightpoint and graduate student in Software Engineering at UT Arlington. I build secure, scalable backend systems and AI-powered tools on Azure and am always looking for new ways to bring intelligence into the software I design.
 
 ### What I Do
 
