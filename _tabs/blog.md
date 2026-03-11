@@ -3,6 +3,7 @@ layout: page
 title: Blog
 icon: fas fa-pen-fancy
 order: 2
+published: false
 ---
 
 <div id="post-list">
