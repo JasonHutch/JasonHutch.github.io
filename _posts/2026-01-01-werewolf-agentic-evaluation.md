@@ -2,7 +2,7 @@
 title: Werewolf Agent Evaluation
 date: 2025-12-16 14:30:00 -0600
 categories: [Portfolio,Education]
-tags: [Azure Foundry]
+tags: [school project, Google ADK, A2A]
 ---
 
 ## Project Description

@@ -2,7 +2,7 @@
 title: Agentic Intranet Search
 date: 2026-01-10 14:30:00 -0600
 categories: [Portfolio,Work]
-tags: [Azure Foundry]
+tags: [work project,Azure Foundry, Agent Framework, Copilot Studio]
 ---
 
 ## Project Description

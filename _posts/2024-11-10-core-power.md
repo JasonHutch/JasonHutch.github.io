@@ -2,7 +2,7 @@
 title: Core Power
 date: 2026-03-8 14:30:00 -0600
 categories: [Portfolio, Education]
-tags: [Hack-a-thon, LangChain, ChromaDb]
+tags: [work project, Hack-a-thon, LangChain, ChromaDb]
 ---
 
 ## Project Description

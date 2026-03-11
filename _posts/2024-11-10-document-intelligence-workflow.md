@@ -2,7 +2,7 @@
 title: Decision Intelligence Workflow
 date: 2025-11-10 14:30:00 -0600
 categories: [Portfolio,Work]
-tags: [Azure Foundry]
+tags: [work project, Azure Foundry, SharePoint, Power Platform]
 ---
 
 ## Project Description

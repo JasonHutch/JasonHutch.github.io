@@ -1,8 +1,8 @@
 ---
-title: Agentic Intranet Search
+title: Dashboard Personalization API
 date: 2025-08-08 14:30:00 -0600
 categories: [Portfolio,Work]
-tags: [Azure Foundry]
+tags: [work project,.NET ,Azure, API ]
 ---
 
 ## Project Description
