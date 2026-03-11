@@ -1,33 +1,32 @@
 ---
-title: Werewolf Socal Deduction Agentic Evaluation
-date: 2025-11-20 09:15:00 -0600
-categories: [Portfolio, Work]
-tags: [blog, Neural Networks, deep learning]
-math: true
+title: Werewolf Agent Evaluation
+date: 2025-12-16 14:30:00 -0600
+categories: [Portfolio,Education]
+tags: [Azure Foundry]
 ---
 
-## Introduction
+## Project Description
 
-The Transformer architecture has dominated the landscape of Natural Language Processing (NLP) and beyond for several years. The mechanism of *Self-Attention* is undoubtedly powerful, allowing models to weigh the importance of different words in a sentence regardless of their distance. However, as we push the boundaries of sequence length and efficiency, we must ask: Is Attention all we need forever?
+I participated in the Agent Beats competition conducted by UC Berkely by creating an agent that leveraged A2A and MCP protocols to coordinate a game of werewolf between a group of agent participants. The goal of this is to evaluate an agents ability to "think" strategically and conduct long term planning.
 
-## The Quadratic Bottleneck
+### Features
+* Evaluator agent manages game state such as individual roles, conversation history, votes, and eliminations.
+* At the end of the game, game state is processed to score individual agent peformance.
+* Scoring rubric to determine how each role scores points. This ensures agents are rewarded based on the goals of thier current role.
 
-The core limitation of standard self-attention is its quadratic complexity with respect to sequence length $N$.
+### Responsibilities
 
-$$ \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V $$
+* Study A2A and MCP protocols and determine strategy for building evaluator agent
+* Creating game state objects and logic 
+* Build orchestrator using ADK
+* Implementing A2A to allow orchestrator agent to communicate with participants
 
-Computing the attention matrix requires $O(N^2)$ time and memory. This becomes prohibitively expensive for very long contexts, such as processing entire books or long DNA sequences.
+### Technology Used
 
-## Emerging Alternatives
+* Python
+* Pydantic
+* Google Agent Development Kit
+* Agent to Agent Protocol (A2A)
+* Model Context Protocol (MCP)
 
-### State Space Models (SSMs)
 
-Recently, State Space Models like **Mamba** have gained traction. They offer linear scaling $O(N)$ while maintaining performance competitive with Transformers on many tasks. By modeling sequences as continuous-time systems discretized for computation, they can efficiently handle long-range dependencies.
-
-### Linear Attention
-
-Various approaches attempt to linearize the attention mechanism. By approximating the softmax function or reordering the matrix multiplications, we can achieve $O(N)$ complexity.
-
-## Conclusion
-
-While Transformers are not going away anytime soon, the exploration of sub-quadratic architectures is one of the most exciting frontiers in Deep Learning. The next generation of foundation models might very well be a hybrid, leveraging the best of attention for dense reasoning and SSMs for massive context retrieval.

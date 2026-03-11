@@ -1,33 +1,33 @@
 ---
-title: Dashabord Personalization API
-date: 2025-11-20 09:15:00 -0600
-categories: [Portfolio, Work]
-tags: [blog, Neural Networks, deep learning]
-math: true
+title: Agentic Intranet Search
+date: 2025-08-08 14:30:00 -0600
+categories: [Portfolio,Work]
+tags: [Azure Foundry]
 ---
 
-## Introduction
+## Project Description
 
-The Transformer architecture has dominated the landscape of Natural Language Processing (NLP) and beyond for several years. The mechanism of *Self-Attention* is undoubtedly powerful, allowing models to weigh the importance of different words in a sentence regardless of their distance. However, as we push the boundaries of sequence length and efficiency, we must ask: Is Attention all we need forever?
+As a part of a large scale intranet modernization, I was tasked with creating an API responsible for supplying the experience with personalized data from platforms such as Workday and Service Now.
 
-## The Quadratic Bottleneck
+### Features
+* Seamless authentication for logged in users, ensuring a personalized experience while ensuring users only see what they have access to
+* Notification engine responsible for delivering updates regarding Service Now tickets directly in the intranet experience
+* Personalized dashboard giving the user insights about Workday training, PTO balances, and password expiration.
 
-The core limitation of standard self-attention is its quadratic complexity with respect to sequence length $N$.
+### Responsibilities
 
-$$ \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V $$
+* Architect & implement notification engine leveraging services such as Azure Function apps, blob storage and SQL database.
+* Build .NET API used to call out to third party services and deliver data to downstream React webparts
+* Determine data schema for data coming from 3rd party services
+* Create CI / CD pipelines in Azure Dev Ops to ensure automated builds and delivery in prod and non-prod environments
 
-Computing the attention matrix requires $O(N^2)$ time and memory. This becomes prohibitively expensive for very long contexts, such as processing entire books or long DNA sequences.
+### Technology Used
 
-## Emerging Alternatives
+* .NET
+* SQL
+* Azure Function Apps
+* Azure Storage Container
+* Azure Cloud Services
+* Entra ID
 
-### State Space Models (SSMs)
 
-Recently, State Space Models like **Mamba** have gained traction. They offer linear scaling $O(N)$ while maintaining performance competitive with Transformers on many tasks. By modeling sequences as continuous-time systems discretized for computation, they can efficiently handle long-range dependencies.
-
-### Linear Attention
-
-Various approaches attempt to linearize the attention mechanism. By approximating the softmax function or reordering the matrix multiplications, we can achieve $O(N)$ complexity.
-
-## Conclusion
-
-While Transformers are not going away anytime soon, the exploration of sub-quadratic architectures is one of the most exciting frontiers in Deep Learning. The next generation of foundation models might very well be a hybrid, leveraging the best of attention for dense reasoning and SSMs for massive context retrieval.

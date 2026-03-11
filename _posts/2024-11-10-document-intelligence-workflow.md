@@ -1,44 +1,35 @@
 ---
-title: Docuemnt Intelligence Workflow
-date: 2024-11-10 14:30:00 -0600
-categories: [Portfolio, Education]
-tags: [school project, c++, compilers, llvm]
+title: Decision Intelligence Workflow
+date: 2025-11-10 14:30:00 -0600
+categories: [Portfolio,Work]
+tags: [Azure Foundry]
 ---
 
 ## Project Description
 
-Build and design an AI enabled workflow capable of ingesting verbose read outs of Key Performance Idicator (KPI), distiling into key take aways and action items, injecting into PowerPoint, and finally socializing to interested parties acorss the organization. 
+The goal of this project was to create an automated system capable of ingesting large summaries of KPI variance explanations, summarize with AI agent, inject into Power Point deck, and finally deliver these generated decks to individual users and groups.
 
-## Key Responsibilities
+Originally, this was a manual process that required someone to go find all the relevant data and manually put together this deck + send it out to people. Not only did this system automate that entire process (saving hours of work), it also opened the door for more personalized insights by introducing a system flexible enough to satisfy a wide range of user requests.
 
-*   **API Design & Implemetation**:
-*   **Agent Design & Implementation**:
-*   **Data Curation & Ingestion**:
-*   **CI/CD Pipeline**: Implemented a robust CI/CD pipeline using GitHub Actions and AWS CodePipeline to automate testing and deployment.
+### Features
+*   Workflow configuration in SharePoint
+*   Summarize variance explanations for each business group using agent built in Azure Foundry
+*   Dynamic placeholder based PowerPoint deck creation allowing for bespoke decks created based on individual user needs
+*   Automation ensuring timely generation and delivery of KPI Power Point decks
 
-## Code Snippet
+### Responsibilities
 
-Here is a snippet of the AST node traversal for generating IR:
+* Architect Agentic Workflow for KPI variance data retrieval, summarization + document generation, and delivery via Teams and Outlook.
+* Develop & Deploy .NET API on Azure Services acting as the agents tool layer allowing it to programmatically generate PPT decks and save to SharePoint.
+* Configure Power Automate flows to orchestrate workflow execution and comms delivery.
+* Provide estimates on token consumption and how various aspects of the workflow could impact month cost.
 
-```cpp
-Value* BinaryExprAST::codegen() {
-    Value* L = LHS->codegen();
-    Value* R = RHS->codegen();
-    if (!L || !R) return nullptr;
+### Technology Used
 
-    switch (Op) {
-    case '+': return Builder->CreateFAdd(L, R, "addtmp");
-    case '-': return Builder->CreateFSub(L, R, "subtmp");
-    case '*': return Builder->CreateFMul(L, R, "multmp");
-    case '<':
-        L = Builder->CreateFCmpULT(L, R, "cmptmp");
-        return Builder->CreateUIToFP(L, Type::getDoubleTy(TheContext), "booltmp");
-    default:
-        return LogErrorV("invalid binary operator");
-    }
-}
-```
+* .NET
+* Azure Foundry
+* Power Automate
+* Shape Crawler SDK
+* SharePoint
 
-## Learnings
 
-This project provided deep insights into how high-level constructs map to low-level machine instructions. Understanding the LLVM infrastructure was particularly valuable for grasping modern compiler optimization techniques.

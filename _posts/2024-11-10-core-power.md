@@ -1,44 +1,37 @@
 ---
 title: Core Power
-date: 2024-11-10 14:30:00 -0600
+date: 2026-03-8 14:30:00 -0600
 categories: [Portfolio, Education]
-tags: [school project, c++, compilers, llvm]
+tags: [Hack-a-thon, LangChain, ChromaDb]
 ---
 
 ## Project Description
 
-Build a platform capable of ingesting and simplifying Sitecore developer documentation. This platform was my submission to the 2026 Sitecore Hack-a-thon.
+Core Power is best described as an interactive knowledge explorer equipped with AI /Agentic capabilities geared to assist Sitecore developers of all skill levels. The application is grounded in Sitecore's certification exam core competency data as well as developer sentiment. In addition to this, Core Power allows developers to generate dynamic quizzes that test specific areas of competency:
 
-## Key Responsibilities
+[Check out the Core Power App here!](https://two026-core-power-delta-task-force-omega.onrender.com)
 
-*   **API Design & Implemetation**:
-*   **Agent Design & Implementation**:
-*   **Data Curation & Ingestion**:
-*   **CI/CD Pipeline**: Implemented a robust CI/CD pipeline using GitHub Actions and AWS CodePipeline to automate testing and deployment.
+### Features
+*   ChromaDB local vector search
+*   Integrated Agentic AI Chat
+*   Personalized Quizzes
+*   Core Competency data visualization
 
-## Code Snippet
+### Responsibilities
 
-Here is a snippet of the AST node traversal for generating IR:
+* Architect Agentic Workflow for chat and quiz generation
+* Build FastAPI equipped with Server Side Event (SSE) integration to power low latency AI chat
+* Build Chat and Quiz streaming agents using LangChain / LangSmith
+* Write logic to parse documentation data and store within ChromaDB collection
+* Deploy services on Render Cloud
 
-```cpp
-Value* BinaryExprAST::codegen() {
-    Value* L = LHS->codegen();
-    Value* R = RHS->codegen();
-    if (!L || !R) return nullptr;
+### Technology Used
 
-    switch (Op) {
-    case '+': return Builder->CreateFAdd(L, R, "addtmp");
-    case '-': return Builder->CreateFSub(L, R, "subtmp");
-    case '*': return Builder->CreateFMul(L, R, "multmp");
-    case '<':
-        L = Builder->CreateFCmpULT(L, R, "cmptmp");
-        return Builder->CreateUIToFP(L, Type::getDoubleTy(TheContext), "booltmp");
-    default:
-        return LogErrorV("invalid binary operator");
-    }
-}
-```
+* FastAPI
+* Next.js
+* LangChain
+* LangSmith
+* ChromaDb
+* Render Cloud
 
-## Learnings
 
-This project provided deep insights into how high-level constructs map to low-level machine instructions. Understanding the LLVM infrastructure was particularly valuable for grasping modern compiler optimization techniques.
