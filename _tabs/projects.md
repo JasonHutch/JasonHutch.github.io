@@ -7,7 +7,7 @@ order: 1
 
 <div id="post-list">
   {% for post in site.posts %}
-    {% if post.tags contains 'work project' or post.tags contains 'school project' %}
+    {% if post.categories contains 'Portfolio' %}
     <div class="card post-preview">
       <a href="{{ post.url | relative_url }}">
         <div class="card-body">
